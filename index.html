@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cenit Aviation | Aviación Privada de Lujo</title>
+
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+
+    <!-- Configuración de Tailwind (debe cargarse ANTES de tailwind.js) -->
+    <script src="script.js"></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white font-sans text-cenit-navy overflow-x-hidden">
+
+<!-- ==================== HEADER ==================== -->
+<header class="absolute top-0 left-0 w-full z-50 px-6 py-4 md:px-12 md:py-8 flex items-center justify-between">
+    <!-- Logo (solo SVG) -->
+    <div class="flex items-center" aria-label="Cenit Aviation logo">
+        <img src="/images/cnt-b.png" alt="Cenit Aviation" class="h-14 w-auto" />
+    </div>
+
+    <!-- Menú + botón juntos a la derecha -->
+    <div class="flex items-center gap-8">
+        <nav class="hidden lg:flex items-center space-x-8" aria-label="Navegación principal">
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Inicio</a>
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Flota</a>
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Experiencias</a>
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Membresía</a>
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Sobre Cenit</a>
+            <a class="text-xs uppercase tracking-widest text-white hover:text-cenit-gold transition" href="#">Contacto</a>
+        </nav>
+
+        <button class="border border-cenit-gold text-cenit-gold text-[10px] px-6 py-2 uppercase tracking-widest hover:bg-cenit-gold hover:text-white transition duration-300" aria-label="Solicitar cotización">
+            Solicitar Cotización
+        </button>
+    </div>
+</header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main>
+        <!-- ===== HERO SECTION con VIDEO ===== -->
+        <section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+            <!-- Video de fondo -->
+            <div class="absolute inset-0 z-0">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                    <source src="/images/hangar.webm" type="video/mp4" />
+                    <!-- Fallback: imagen estática -->
+                    <img alt="Jet privado de lujo al atardecer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPY377nlxLM5ruaV2XbpLpTCokinYRrRQy1p_JYR3eUhVZp0M72TrTD14hPrZovzN_3iUzHk4Qj4Q7Sf0BOWp7LLAu27bxU4uJjmg-kxcSZeY6pCnshHCFvcCFUQiG4_GL0oYrENcDLW5CgUILfTusySeWv_qritt4cDdEoVmPdmmfZSPoNcKSoyme3PQNq1FdzxL_FSn4oOTsoBo39H1sLRmEk9HM_Jned8VEJ5MWtZIWtkHY1o4eG1y3SJWL8kE44r_9j0tLoIA" />
+                </video>
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="relative z-10 container mx-auto px-6 lg:px-20 text-white max-w-5xl">
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight max-w-3xl text-shadow">
+                    DONDE LA <span class="text-cenit-gold">AVIACIÓN</span> ALCANZA SU MÁXIMA <span class="text-cenit-gold">EXPRESIÓN.</span>
+                </h1>
+                <p class="text-lg md:text-xl font-light mb-10 max-w-xl opacity-90">
+                    Vuelos ejecutivos, experiencias exclusivas y un servicio diseñado para quienes exigen excelencia.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-cenit-gold text-white px-8 py-4 uppercase tracking-widest text-xs font-semibold hover:bg-cenit-gold-dark transition duration-300" aria-label="Explorar flota">
+                        Explorar Flota
+                    </button>
+                    <button class="border border-white text-white px-8 py-4 uppercase tracking-widest text-xs font-semibold hover:bg-white hover:text-cenit-navy transition duration-300" aria-label="Solicitar cotización">
+                        Solicitar Cotización
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURES BAR ===== -->
+        <section class="bg-cenit-navy py-12 px-6 lg:px-20" aria-label="Características destacadas">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-cenit-gold" aria-hidden="true">
+                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm uppercase tracking-widest font-semibold">Seguridad Operacional</h4>
+                        <p class="text-gray-400 text-xs mt-1">Estándares internacionales que garantizan vuelos seguros.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-cenit-gold" aria-hidden="true">
+                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm uppercase tracking-widest font-semibold">Atención Personalizada</h4>
+                        <p class="text-gray-400 text-xs mt-1">Asesores dedicados a cada detalle de tu viaje.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-cenit-gold" aria-hidden="true">
+                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm uppercase tracking-widest font-semibold">Disponibilidad 24/7</h4>
+                        <p class="text-gray-400 text-xs mt-1">Listos para despegar cuando nos necesites.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="flex items-center space-x-4">
+                    <div class="text-cenit-gold" aria-hidden="true">
+                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm uppercase tracking-widest font-semibold">Privacidad Absoluta</h4>
+                        <p class="text-gray-400 text-xs mt-1">Confidencialidad total en cada etapa de tu experiencia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FLEET SECTION ===== -->
+        <section class="py-20 px-6 lg:px-20 bg-[#f9f9f9]" aria-labelledby="fleet-heading">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div class="max-w-2xl">
+                        <p class="text-cenit-gold text-xs uppercase tracking-[0.3em] font-semibold mb-2">Nuestra Flota</p>
+                        <h2 id="fleet-heading" class="font-serif text-3xl md:text-4xl text-cenit-navy uppercase">Aeronaves para cada misión</h2>
+                        <div class="w-16 h-[2px] bg-cenit-gold mt-4"></div>
+                    </div>
+                    <div class="mt-6 md:mt-0 text-right">
+                        <p class="text-gray-500 text-sm mb-2">Contamos con una flota de jets privados de última generación.</p>
+                        <a class="text-cenit-gold text-xs font-semibold uppercase tracking-widest flex items-center justify-end hover:underline" href="#">
+                            Ver toda la flota <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Fleet Card 1 -->
+                    <article class="bg-white shadow-sm border border-gray-100 group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img alt="Cenit Light Jet en vuelo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="/images/light-jet.jpg" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-lg uppercase mb-4">Cenit Light Jet</h3>
+                            <div class="flex justify-between text-[11px] text-gray-500 mb-6">
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">👤</span> 6-7 Pasajeros</span>
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">⚡</span> 2,000 nm Alcance</span>
+                            </div>
+                            <a class="text-cenit-gold text-[10px] font-bold uppercase tracking-widest hover:text-cenit-gold-dark transition" href="#">Ver Detalles →</a>
+                        </div>
+                    </article>
+
+                    <!-- Fleet Card 2 -->
+                    <article class="bg-white shadow-sm border border-gray-100 group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img alt="Cenit Midsize Jet en vuelo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="/images/midsize-jet.jpg" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-lg uppercase mb-4">Cenit Midsize Jet</h3>
+                            <div class="flex justify-between text-[11px] text-gray-500 mb-6">
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">👤</span> 8-9 Pasajeros</span>
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">⚡</span> 3,500 nm Alcance</span>
+                            </div>
+                            <a class="text-cenit-gold text-[10px] font-bold uppercase tracking-widest hover:text-cenit-gold-dark transition" href="#">Ver Detalles →</a>
+                        </div>
+                    </article>
+
+                    <!-- Fleet Card 3 -->
+                    <article class="bg-white shadow-sm border border-gray-100 group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img alt="Cenit Heavy Jet en vuelo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="/images/heavy-jet.jpg" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-lg uppercase mb-4">Cenit Heavy Jet</h3>
+                            <div class="flex justify-between text-[11px] text-gray-500 mb-6">
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">👤</span> 10-14 Pasajeros</span>
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">⚡</span> 5,500 nm Alcance</span>
+                            </div>
+                            <a class="text-cenit-gold text-[10px] font-bold uppercase tracking-widest hover:text-cenit-gold-dark transition" href="#">Ver Detalles →</a>
+                        </div>
+                    </article>
+
+                    <!-- Fleet Card 4 -->
+                    <article class="bg-white shadow-sm border border-gray-100 group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img alt="Helicóptero Cenit en vuelo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="/images/helicoptero-cenit.jpg" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-lg uppercase mb-4">Cenit Helicopters</h3>
+                            <div class="flex justify-between text-[11px] text-gray-500 mb-6">
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">👤</span> 1-6 Pasajeros</span>
+                                <span class="flex items-center"><span class="mr-2 text-cenit-gold" aria-hidden="true">⚡</span> 600 nm Alcance</span>
+                            </div>
+                            <a class="text-cenit-gold text-[10px] font-bold uppercase tracking-widest hover:text-cenit-gold-dark transition" href="#">Ver Detalles →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCES SECTION ===== -->
+        <section class="bg-cenit-navy py-24 px-6 lg:px-20 text-white overflow-hidden" aria-labelledby="experiences-heading">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-4">
+                        <p class="text-cenit-gold text-xs uppercase tracking-[0.3em] font-semibold mb-2">Experiencias</p>
+                        <h2 id="experiences-heading" class="font-serif text-4xl mb-6 leading-snug">VIAJES QUE TRASCIENDEN</h2>
+                        <p class="text-gray-400 text-sm mb-10 leading-relaxed">
+                            Más que vuelos, creamos experiencias memorables adaptadas a su estilo de vida y necesidades.
+                        </p>
+                        <button class="border border-cenit-gold text-cenit-gold px-8 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-cenit-gold hover:text-white transition duration-300" aria-label="Explorar experiencias">
+                            Explorar Experiencias
+                        </button>
+                    </div>
+
+                    <!-- Experience Grid -->
+                    <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-5 gap-2 h-80">
+                        <!-- Experience 1 -->
+                        <div class="relative group cursor-pointer overflow-hidden rounded-sm">
+                            <img alt="Viajes ejecutivos de lujo" class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpSSB91GjCf39Zk-d_RDzTd5uoX0WRJ8dffp_cHjRseOiWbNLo2CQkhI1T7BArBOIEMeIzqPLWpIsh-c8lnkQ_L_NVb50n2yxT8wTvP5OBy6IaSMJnBAnlfTJNyGB8Yig8VSrnUmIYdA9OnjG2e57wWqSMXsEla1rrN8JzxUrcihdZsBPZtesmhgY4T1s-9Rz0EAc9GuQK3KmU0VUTAHNforubB2WrOgeJKmKgjU-CsffU8PJyRiU0b_c40eQFw29QWYTqISwhxk8" />
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center px-2">
+                                <div class="mb-2 text-cenit-gold" aria-hidden="true">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold">Viajes Ejecutivos</span>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative group cursor-pointer overflow-hidden rounded-sm">
+                            <img alt="Vacaciones de lujo" class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAubjpTdGVgM_G-mKqSoqb3Za-_LYZFdZ9uV024KYhKgpaxj_bUJmLYd_GrmgP7qHik4elUeoKSoPs1b8t-KtBeOkA7RgvcOKlEqS11D8en_yIo1e7c2zCmhhBda1eNH84vvF1ZxB7qMpOGpZupEZ2XMXXKSUGwhPXyyErXq1IUty-JiuD8gtEE-km4BBZrUxCZWVKHEREX4hUcnci2Gjc_O3d6sCw4xg-sq4xM9xuOWECDNyIeW-c9kEbo4wlDYOwtnmi6LZznmy4" />
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center px-2">
+                                <div class="mb-2 text-cenit-gold" aria-hidden="true">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold">Vacaciones de Lujo</span>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="relative group cursor-pointer overflow-hidden rounded-sm">
+                            <img alt="Eventos exclusivos" class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcXUFIojbJpkygisL3hRwfaAkQ3yKWCaDolg8sC2ZjILWqbXQxilSptY-X6pmlCkGTmzR22j1Eu5lg4o9vxFp-Xsq5mCnHsC4P_J90_VNLJ7dQZ44MBX2Lhx-X5kgV5xpvf5Q8iWsdRZJq6l4KEd_E5EkGoNoJlKycC6uzfDwBZqITBrbtkeMiZ8nQmgDYMi3YX_vN-ewofmgYQWUEiDIBE5RDmVEdjx_l23ISL_eMfCxDT_ovOgcQszdarDlsxpzl-Z7BIpseCVU" />
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center px-2">
+                                <div class="mb-2 text-cenit-gold" aria-hidden="true">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold">Eventos Exclusivos</span>
+                            </div>
+                        </div>
+
+                        <!-- Experience 4 -->
+                        <div class="relative group cursor-pointer overflow-hidden rounded-sm">
+                            <img alt="Concierge personalizado" class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz-WFQJeclLjWMzp2IeuWrxYYTWjcmz8vOMr56BkuIOkx6xxAF2FrZTiorLxzU6-KYiV9gGn0yAxeIu-kuTuOB4YJt3K_mvTsOCQpa4N0Q2JAVRYBCpiwSt_P5jSkCcLd3SJ-_jGXzdhBWLwxKfW6C02PVQC8GUm3z7VASrqPVspHx9jE0vORVeyeX49ZEpjK7ekGa5MhU02TgPugkygCqkm4HVCRZa8fDTdGS3K7DIuq_aOvFdjxwwuUjHaxOFNpaptDfjj9Ufn0" />
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center px-2">
+                                <div class="mb-2 text-cenit-gold" aria-hidden="true">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold">Concierge Personalizado</span>
+                            </div>
+                        </div>
+
+                        <!-- Experience 5 -->
+                        <div class="relative group cursor-pointer overflow-hidden rounded-sm">
+                            <img alt="Destinos exclusivos" class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi3RzC0Kqy2-b5Rx-K5gtedRPJIRhUfgVFeGnLidDsPXTC7ntvE_86NAcGSQ9tMJsv9QF2RaznI-1M0S9qzzFQwDLyUcgAPPapw0DZh_pBUiLIQGIoeBq-JTay_u2rIDFqdYtFOTkD4Ceh7r2MTQEjhzNI_2IlmEqQMGPwUpHYzsR41xpILIfYpdGUwr7mlWVHNCS7HER-MeU4TrhgqIE-SKalVqtx780kSdCzA-pAegjMPOh0xjruE7YXR17_7CfGCL-t7xom8qA" />
+                            <div class="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center px-2">
+                                <div class="mb-2 text-cenit-gold" aria-hidden="true">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                        <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-widest font-bold">Destinos Exclusivos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MEMBERSHIP SECTION ===== -->
+        <section class="py-24 px-6 lg:px-20 bg-white" aria-labelledby="membership-heading">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <!-- Membership Intro -->
+                    <div class="lg:w-1/3">
+                        <p class="text-cenit-gold text-xs uppercase tracking-[0.3em] font-semibold mb-2">Membresía Cenit</p>
+                        <h2 id="membership-heading" class="font-serif text-4xl text-cenit-navy uppercase leading-tight mb-8">Un mundo de privilegios</h2>
+                        <p class="text-gray-500 text-sm mb-12">
+                            Elija el nivel de membresía que mejor se adapte a su estilo de vida y disfrute de beneficios inigualables.
+                        </p>
+                        <button class="border border-gray-300 text-gray-600 px-10 py-3 text-[10px] uppercase tracking-widest font-bold hover:border-cenit-gold hover:text-cenit-gold transition duration-300" aria-label="Conocer membresías">
+                            Conocer Membresías
+                        </button>
+                    </div>
+
+                    <!-- Membership Cards -->
+                    <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Tier: Member -->
+                        <div class="bg-cenit-navy p-10 flex flex-col membership-card-glow membership-card-hover transition duration-300">
+                            <div class="text-center mb-8">
+                                <span class="font-serif text-white tracking-[0.4em] text-sm">C E N I T</span>
+                                <h4 class="text-cenit-gold text-[10px] uppercase tracking-[0.5em] mt-1">Member</h4>
+                            </div>
+                            <ul class="space-y-4 mb-12 text-[10px] text-gray-300 flex-grow">
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">👤</span> Tarifas preferenciales</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">🎟️</span> Acceso a eventos</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">⏱️</span> Disponibilidad garantizada</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">⭐</span> Servicio prioritario</li>
+                            </ul>
+                            <a class="text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:text-cenit-gold" href="#">Conoce más →</a>
+                        </div>
+
+                        <!-- Tier: Elite (destacado) -->
+                        <div class="bg-cenit-gold p-10 flex flex-col membership-card-hover transition duration-300 transform md:-translate-y-4 shadow-xl hover:shadow-2xl">
+                            <div class="text-center mb-4">
+                                <span class="bg-white/20 text-[8px] uppercase tracking-widest px-3 py-1 rounded-full text-white font-bold">Más Popular</span>
+                            </div>
+                            <div class="text-center mb-8">
+                                <span class="font-serif text-white tracking-[0.4em] text-sm">C E N I T</span>
+                                <h4 class="text-white text-[10px] uppercase tracking-[0.5em] mt-1">Elite</h4>
+                            </div>
+                            <ul class="space-y-4 mb-12 text-[10px] text-white flex-grow">
+                                <li class="flex items-center"><span class="mr-3" aria-hidden="true">✓</span> Todos los beneficios Member</li>
+                                <li class="flex items-center"><span class="mr-3" aria-hidden="true">✓</span> Horas garantizadas</li>
+                                <li class="flex items-center"><span class="mr-3" aria-hidden="true">✓</span> Concierge dedicado</li>
+                                <li class="flex items-center"><span class="mr-3" aria-hidden="true">✓</span> Acceso a salas VIP</li>
+                            </ul>
+                            <a class="text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:opacity-80" href="#">Conoce más →</a>
+                        </div>
+
+                        <!-- Tier: Private -->
+                        <div class="bg-cenit-navy-light p-10 flex flex-col membership-card-glow membership-card-hover transition duration-300">
+                            <div class="text-center mb-8">
+                                <span class="font-serif text-white tracking-[0.4em] text-sm">C E N I T</span>
+                                <h4 class="text-cenit-gold text-[10px] uppercase tracking-[0.5em] mt-1">Private</h4>
+                            </div>
+                            <ul class="space-y-4 mb-12 text-[10px] text-gray-300 flex-grow">
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">🛡️</span> Todos los beneficios Elite</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">⚙️</span> Soluciones a la medida</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">👑</span> Experiencias VIP</li>
+                                <li class="flex items-center"><span class="mr-3 text-cenit-gold" aria-hidden="true">🔒</span> Máxima privacidad</li>
+                            </ul>
+                            <a class="text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:text-cenit-gold" href="#">Conoce más →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIAL SECTION ===== -->
+        <section class="relative py-32 overflow-hidden bg-cenit-navy" aria-label="Testimonio">
+            <div class="absolute inset-0">
+                <img alt="Jet sobre las nubes" class="w-full h-full object-cover" src="/images/airplane.jpg" />
+                <!-- Overlay azul -->
+                <div class="absolute inset-0 testimonial-overlay"></div>
+            </div>
+            <div class="relative z-10 container mx-auto px-6 max-w-5xl text-left">
+                <div class="text-cenit-gold text-5xl mb-8" aria-hidden="true">
+                    <span class="font-serif">“</span>
+                </div>
+                <blockquote class="text-xl md:text-3xl font-light text-white italic leading-relaxed mb-6 max-w-2xl">
+                    CENIT Aviation entiende nuestras necesidades y supera nuestras expectativas en cada vuelo.
+                </blockquote>
+                <cite class="block text-gray-300 text-xs uppercase tracking-widest not-italic">— Cliente Corporativo</cite>
+                <!-- Slider indicators -->
+                <div class="flex space-x-2 mt-12">
+                    <button class="w-2 h-2 rounded-full bg-cenit-gold" aria-label="Testimonio 1 activo"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-600" aria-label="Testimonio 2"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-600" aria-label="Testimonio 3"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+<footer class="bg-cenit-navy py-12 border-t border-gray-800">
+    <div class="container mx-auto px-6">
+        <!-- Bloque principal centrado -->
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
+            <div class="text-center">
+                <h3 class="font-serif text-2xl md:text-3xl text-white uppercase tracking-wider">
+                    ¿Listo para elevar <br class="hidden md:block" /> tu experiencia?
+                </h3>
+            </div>
+            <div>
+                <button class="bg-cenit-gold text-white px-10 py-4 uppercase tracking-widest text-xs font-bold hover:bg-cenit-gold-dark transition duration-300" aria-label="Contactar a un asesor">
+                    Contactar a un asesor
+                </button>
+            </div>
+        </div>
+
+        <!-- Línea divisoria y footer inferior centrado -->
+        <div class="mt-16 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-center items-center text-[10px] text-gray-500 uppercase tracking-widest space-y-4 md:space-y-0 md:space-x-6">
+            <p>© 2026 Cenit Aviation. Todos los derechos reservados.</p>
+            <div class="flex space-x-6">
+                <a class="hover:text-white transition" href="#">Privacidad</a>
+                <a class="hover:text-white transition" href="#">Términos</a>
+                <a class="hover:text-white transition" href="#">FAQ</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
